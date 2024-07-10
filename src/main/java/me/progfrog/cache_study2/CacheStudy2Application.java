@@ -22,8 +22,8 @@ public class CacheStudy2Application implements ApplicationRunner {
 
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
-		userRepository.save(User.builder().name("aaa").email("a@email.com").build());
-		userRepository.save(User.builder().name("bbb").email("b@email.com").build());
-		userRepository.save(User.builder().name("ccc").email("c@email.com").build());
+		// userRepository.save(User.builder().name("aaa").email("a@email.com").build());
+		// userRepository.save(User.builder().name("bbb").email("b@email.com").build());
+		// userRepository.save(User.builder().name("ccc").email("c@email.com").build());
 	}
 }
