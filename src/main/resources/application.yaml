@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: cache-study2
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/frogsns
+    username: root
+    password: frog
+  jpa:
+    hibernate.ddl-auto: update
+    show-sql: true
