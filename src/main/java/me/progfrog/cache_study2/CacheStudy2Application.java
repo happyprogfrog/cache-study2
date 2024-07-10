@@ -1,7 +1,6 @@
 package me.progfrog.cache_study2;
 
 import lombok.RequiredArgsConstructor;
-import me.progfrog.cache_study2.domain.entity.User;
 import me.progfrog.cache_study2.repository.UserRepository;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
