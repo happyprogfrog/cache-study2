@@ -5,10 +5,13 @@ import me.progfrog.cache_study2.domain.entity.RedisHashUser;
 import me.progfrog.cache_study2.domain.entity.User;
 import me.progfrog.cache_study2.repository.RedisHashUserRepository;
 import me.progfrog.cache_study2.repository.UserRepository;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.time.Duration;
+
+import static me.progfrog.cache_study2.config.CacheConfig.CACHE1;
 
 @RequiredArgsConstructor
 @Service
@@ -49,5 +52,10 @@ public class UserService {
             );
         });
         return cachedUser;
+    }
+
+    @Cacheable(cacheNames = CACHE1, key = "'user:' + #p0")
+    public User getUser3(final Long id) {
+        return userRepository.findById(id).orElseThrow();
     }
 }
