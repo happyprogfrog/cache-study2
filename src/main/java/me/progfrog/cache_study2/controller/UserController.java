@@ -1,6 +1,7 @@
 package me.progfrog.cache_study2.controller;
 
 import lombok.RequiredArgsConstructor;
+import me.progfrog.cache_study2.domain.entity.RedisHashUser;
 import me.progfrog.cache_study2.domain.entity.User;
 import me.progfrog.cache_study2.service.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,5 +17,10 @@ public class UserController {
     @GetMapping("/users/{id}")
     public User getUser(@PathVariable(name = "id") Long id) {
         return userService.getUser(id);
+    }
+
+    @GetMapping("/redishash-users/{id}")
+    public RedisHashUser getUser2(@PathVariable(name = "id") Long id) {
+        return userService.getUser2(id);
     }
 }
