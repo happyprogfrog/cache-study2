@@ -24,8 +24,13 @@ public class UserController {
         return userService.getUser2(id);
     }
 
-    @GetMapping("/new-users/{id}")
+    @GetMapping("/cached-users/{id}")
     public User getUser3(@PathVariable(name = "id") Long id) {
         return userService.getUser3(id);
+    }
+
+    @GetMapping("/nocached-users/{id}")
+    public User getNoCacheUser(@PathVariable(name = "id") Long id) {
+        return userService.getNoCachedUser(id);
     }
 }

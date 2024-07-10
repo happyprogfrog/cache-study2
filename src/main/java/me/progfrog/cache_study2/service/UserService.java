@@ -58,4 +58,8 @@ public class UserService {
     public User getUser3(final Long id) {
         return userRepository.findById(id).orElseThrow();
     }
+
+    public User getNoCachedUser(final Long id) {
+        return userRepository.findById(id).orElseThrow();
+    }
 }
